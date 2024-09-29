@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+ int T;
+ cin>>T;
+ if(T>=1&&T<=1000){
+     for(int i=0;i<T;i++){
+         int d_dsa,d_toc,d_dm;
+         cin>>d_dsa>>d_toc>>d_dm;
+         int s_dsa,s_toc,s_dm;
+         cin>>s_dsa>>s_toc>>s_dm;
+         if(d_dsa>=0&&d_dsa<=100&&d_toc>=0&&d_toc<=100&&d_dm>=0&&d_dm<=100&&s_dsa>=0&&s_dsa<=100&&s_toc>=0&&s_toc<=100&&s_dm>=0&&s_dm<=100){
+             int t1=d_dm+d_toc+d_dsa;
+             int  t2=s_dm+s_toc+s_dsa;
+             if(t1>t2)
+             cout<<"Dragon"<<endl;
+             else if(t1==t2){
+              if(d_dsa>s_dsa)
+              cout<<"Dragon"<<endl;
+             else if(d_dsa==s_dsa){
+              if(d_toc>s_toc)
+              cout<<"Dragon"<<endl;
+              else if(d_toc==s_toc)
+              cout<<"Tie"<<endl;
+              else
+              cout<<"Sloth"<<endl;
+             }
+             else
+             cout<<"Sloth"<<endl;
+             }
+             else
+             cout<<"Sloth"<<endl;
+         }
+     }
+ }
+return 0;
+}
