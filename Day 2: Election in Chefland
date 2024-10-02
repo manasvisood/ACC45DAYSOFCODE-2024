@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int T;
+	cin>>T;
+	if(T>=1&&T<=500){
+	    for(int i=0;i<T;i++){
+	        int XA,XB,XC;
+	        cin>>XA>>XB>>XC;
+if(XA>=0&&XA<=101&&XB>=0&&XB<=101&&XC>=0&&XC<=101&&(XA+XB+XC==101)){
+    if(XA>50)
+    cout<<"A"<<endl;
+    else if(XB>50)
+    cout<<"B"<<endl;
+    else if(XC>50)
+    cout<<"C"<<endl;
+    else 
+    cout<<"NOTA"<<endl;
+}
+	    }
+	}
+return 0;
+}
