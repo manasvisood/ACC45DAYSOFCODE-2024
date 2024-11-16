@@ -1,0 +1,37 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+    
+    while (T--) {
+        int N;
+        cin >> N;
+        
+        int A[N]; // Given the constraint 1 ≤ A[i] ≤ N, we can use this size.
+        int frequency[N] = {0}; // Frequency array initialized to 0.
+
+        // Read the array elements
+        for (int i = 0; i < N; i++) {
+            cin >> A[i];
+            if (A[i] >= 1 && A[i] <= N) {
+                frequency[A[i]]++; // Count frequency of each element.
+            }
+        }
+
+        // Find the maximum frequency
+        int max_frequency = 0;
+        for (int i = 1; i <= N; i++) {
+            if (frequency[i] > max_frequency) {
+                max_frequency = frequency[i]; // Update maximum frequency.
+            }
+        }
+
+        // The minimum number of operations required
+        cout << (N - max_frequency) << endl; // Output the result for this test case.
+    }
+
+    return 0;
+}
